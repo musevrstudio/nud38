@@ -133,6 +133,17 @@ a {
   letter-spacing: 0;
 }
 
+.header-actions {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -166,7 +177,13 @@ nav a::after {
   min-width: 34px;
   padding: 2px 8px;
   border: 1px solid rgba(255, 249, 236, 0.48);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .language-link::after {
@@ -176,6 +193,12 @@ nav a::after {
 nav a:hover::after,
 nav a:focus-visible::after {
   transform: scaleX(1);
+}
+
+.menu-toggle:focus-visible,
+.language-link:focus-visible {
+  outline: 2px solid rgba(255, 249, 236, 0.72);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -877,29 +900,93 @@ footer p {
 
   .site-header {
     position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .header-actions {
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-items: start;
-    gap: 14px;
-    padding: 18px 18px 0;
+    place-items: center;
+    border: 1px solid rgba(255, 249, 236, 0.48);
+    color: var(--cream);
+    background: rgba(8, 11, 9, 0.28);
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .menu-toggle span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .menu-toggle::before {
+    width: 18px;
+    height: 2px;
+    content: "";
+    background: currentColor;
+    box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+  }
+
+  .site-header:not(.menu-open) nav {
+    display: none;
   }
 
   nav {
-    width: 100%;
-    max-width: none;
-    justify-content: flex-start;
-    gap: 10px 16px;
-    font-size: 11px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(72vw, 260px);
+    display: grid;
+    gap: 0;
+    padding: 8px 0;
+    border: 1px solid rgba(255, 249, 236, 0.26);
+    background: rgba(12, 16, 14, 0.94);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+    font-size: 12px;
     line-height: 1;
   }
 
+  nav a {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 249, 236, 0.12);
+  }
+
+  nav a:last-child {
+    border-bottom: 0;
+  }
+
   nav a::after {
-    bottom: -5px;
+    display: none;
   }
 
   .language-link {
-    min-width: 30px;
-    padding: 2px 7px;
+    min-width: 42px;
+    min-height: 42px;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 8px;
+    background: rgba(8, 11, 9, 0.28);
+    line-height: 1;
   }
 
   .hero {
@@ -950,7 +1037,7 @@ footer p {
 @media (max-width: 420px) {
   nav {
     gap: 9px 12px;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.05em;
   }
 }

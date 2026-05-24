@@ -21,13 +21,17 @@
   <meta property="og:title" content="NuD-38 | Historical VR Flight Experience">
   <meta property="og:description" content="A historical VR flight experience built around Nuri Demirag's aviation legacy and a focused Istanbul route.">
   <meta property="og:url" content="https://nud38.com/en/">
-  <meta property="og:image" content="https://nud38.com/assets/thehero.png">
-  <meta property="og:image:alt" content="NuD-38 historical VR flight experience aircraft artwork">
+  <meta property="og:image" content="https://nud38.com/assets/social-card.jpg">
+  <meta property="og:image:secure_url" content="https://nud38.com/assets/social-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cinematic aircraft artwork for the NuD-38 historical VR flight experience">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NuD-38 | Historical VR Flight Experience">
   <meta name="twitter:description" content="A focused VR route from the Besiktas workshop to Yesilkoy and Taskisla, shaped by Turkish aviation history.">
-  <meta name="twitter:image" content="https://nud38.com/assets/thehero.png">
+  <meta name="twitter:image" content="https://nud38.com/assets/social-card.jpg">
 
   <title>NuD-38 | Historical VR Flight Experience</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -66,15 +70,18 @@
         <strong>NuD-38</strong>
       </span>
     </a>
-    <nav>
-      <a href="#experience">Experience</a>
-      <a href="#route">Route</a>
-      <a href="#archive">Archive</a>
-      <a href="#prototype">Prototype</a>
-      <a href="#formats">Format</a>
-      <a href="#support">Viewing</a>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span>Menu</span></button>
+      <nav id="primary-nav">
+        <a href="#experience">Experience</a>
+        <a href="#route">Route</a>
+        <a href="#archive">Archive</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#formats">Format</a>
+        <a href="#support">Viewing</a>
+      </nav>
       <a class="language-link" href="../index.html" hreflang="tr" lang="tr">TR</a>
-    </nav>
+    </div>
   </header>
 
   <main id="main">
@@ -82,7 +89,7 @@
       <img src="../assets/thehero.png" alt="NuD-38 aircraft parked in front of the Yesilkoy hangar in a historical airfield atmosphere" class="hero-image" width="1673" height="940">
       <div class="hero-overlay"></div>
       <div class="hero-copy">
-        <p class="eyebrow">Limited-access historical aviation experience</p>
+        <p class="eyebrow">Limited-access experience</p>
         <h1>NuD-38</h1>
         <p class="lead">A forgotten aviation vision, made perceptible from the cockpit through VR, cinematic narrative and a physical experience language.</p>
         <div class="hero-actions">
@@ -286,5 +293,22 @@
       <span>© 2026 NuD-38. All rights reserved.</span>
     </div>
   </footer>
+  <script>
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelectorAll("#primary-nav a");
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("menu-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        header.classList.remove("menu-open");
+        toggle?.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
