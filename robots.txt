@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nud38.com/sitemap.xml
