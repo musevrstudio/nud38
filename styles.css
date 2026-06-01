@@ -441,7 +441,7 @@ h3 {
   display: grid;
   align-content: start;
   gap: 12px;
-  padding: clamp(22px, 3vw, 36px);
+  padding: clamp(28px, 3.4vw, 44px);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent),
     var(--paper);
@@ -511,7 +511,7 @@ h3 {
   min-height: 64px;
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 18px 22px;
   border: 1px solid rgba(255, 249, 236, 0.18);
   color: rgba(255, 249, 236, 0.84);
   background: rgba(255, 249, 236, 0.055);
@@ -1051,6 +1051,12 @@ footer p {
     grid-template-columns: 1fr;
   }
 
+  .status-grid article,
+  .simulation-list span {
+    padding-left: clamp(26px, 5vw, 38px);
+    padding-right: clamp(26px, 5vw, 38px);
+  }
+
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
@@ -1232,6 +1238,12 @@ footer p {
   .prototype-media,
   .prototype-media img {
     min-height: 340px;
+  }
+
+  .status-panel,
+  .simulation-layer {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   footer {
