@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NuD-38, Nuri Demirağ'ın havacılık mirasını arşiv belgeleriyle desteklenen Beşiktaş, Yeşilköy ve Taşkışla rotası üzerinden anlatan tarihi bir VR uçuş deneyimidir.">
+  <meta name="description" content="NuD-38, Nu.D-38 uçağı ve Nuri Demirağ hikayesinden doğan, Unreal Engine üzerinde geliştirilen oynanabilir tarihi VR uçuş simülasyonu prototipidir.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#111612">
   <link rel="canonical" href="https://nud38.com/">
@@ -18,8 +18,8 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NuD-38">
-  <meta property="og:title" content="NuD-38 | Nuri Demirağ Tarihi VR Uçuş Deneyimi">
-  <meta property="og:description" content="Nuri Demirağ'ın uçak üretme iradesini kokpitten hissettiren, arşiv belgelerine dayalı tarihi VR uçuş deneyimi.">
+  <meta property="og:title" content="NuD-38 | Tarihi VR Uçuş Simülasyonu">
+  <meta property="og:description" content="Nu.D-38 ve Nuri Demirağ mirasından doğan, arşiv destekli oynanabilir VR uçuş simülasyonu prototipi.">
   <meta property="og:url" content="https://nud38.com/">
   <meta property="og:image" content="https://nud38.com/assets/social-card.jpg">
   <meta property="og:image:secure_url" content="https://nud38.com/assets/social-card.jpg">
@@ -29,11 +29,11 @@
   <meta property="og:image:alt" content="NuD-38 tarihi VR uçuş deneyimi için hazırlanan sinematik uçak görseli">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NuD-38 | Nuri Demirağ Tarihi VR Uçuş Deneyimi">
-  <meta name="twitter:description" content="Beşiktaş atölyelerinden Yeşilköy'e, oradan Taşkışla üzerine uzanan tarihi bir VR uçuş rotası.">
+  <meta name="twitter:title" content="NuD-38 | Tarihi VR Uçuş Simülasyonu">
+  <meta name="twitter:description" content="Nu.D-38 ve Nuri Demirağ hikayesinden doğan oynanabilir tarihi VR uçuş prototipi.">
   <meta name="twitter:image" content="https://nud38.com/assets/social-card.jpg">
 
-  <title>NuD-38 | Nuri Demirağ Tarihi VR Uçuş Deneyimi</title>
+  <title>NuD-38 | Tarihi VR Uçuş Simülasyonu</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "name": "NuD-38",
     "url": "https://nud38.com/",
     "image": "https://nud38.com/assets/thehero.png",
-    "description": "Nuri Demirağ'ın havacılık mirasını arşiv belgeleriyle desteklenen Beşiktaş, Yeşilköy ve Taşkışla rotası üzerinden anlatan tarihi VR uçuş deneyimi.",
+    "description": "Nu.D-38 uçağı ve Nuri Demirağ hikayesinden doğan, Unreal Engine üzerinde geliştirilen oynanabilir tarihi VR uçuş simülasyonu prototipi.",
     "genre": ["Historical", "Virtual Reality", "Flight Experience"],
     "gamePlatform": ["PC VR"],
     "applicationCategory": "Game",
@@ -74,10 +74,10 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span>Menü</span></button>
       <nav id="primary-nav">
         <a href="#deneyim">Deneyim</a>
-        <a href="#rota">Rota</a>
+        <a href="#durum">Durum</a>
+        <a href="#medya">Medya</a>
         <a href="#arsiv">Arşiv</a>
         <a href="#prototip">Prototip</a>
-        <a href="#formatlar">Format</a>
         <a href="#katki">Gösterim</a>
       </nav>
       <a class="language-link" href="en/index.html" hreflang="en" lang="en">EN</a>
@@ -91,9 +91,10 @@
       <div class="hero-copy">
         <p class="eyebrow">Sınırlı erişimli deneyim</p>
         <h1>NuD-38</h1>
+        <p class="hero-positioning">Oynanabilir VR uçuş simülasyonu prototipi</p>
         <p class="lead">Unutulmuş bir havacılık vizyonu; VR, sinematik anlatı ve fiziksel deneyim diliyle kokpitten yeniden duyulur hale geliyor.</p>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:hello@nud38.com?subject=NuD38%20-%20%C3%96zel%20G%C3%B6sterim%20Ba%C5%9Fvurusu&body=Merhaba%2C%0A%0ANuD38%20%C3%B6zel%20g%C3%B6sterimi%20i%C3%A7in%20ba%C5%9Fvuru%20yapmak%20istiyorum.%0A%0AAd%3A%0AKurum%20%2F%20arka%20plan%3A%0A%C4%B0lgi%20alan%C4%B1%3A%0AMesaj%3A">Özel Gösterim Başvurusu</a>
+          <a class="button primary" href="mailto:hello@nud38.com?subject=NuD38%20-%20%C3%96zel%20Demo%20Talebi&body=Merhaba%2C%0A%0ANuD38%20%C3%B6zel%20demo%20%2F%20g%C3%B6sterim%20s%C3%BCreci%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%3A%0AKurum%20%2F%20arka%20plan%3A%0A%C4%B0lgi%20alan%C4%B1%3A%0AMesaj%3A">Özel Demo Talebi</a>
           <a class="button secondary" href="#prototip">Prototipi incele</a>
         </div>
         <p class="cta-note">Arşiv, kurum, üretim ve stratejik ortaklık alanlarında anlamlı katkı sunabilecek davetliler için erken gösterim.</p>
@@ -106,12 +107,68 @@
       </aside>
     </section>
 
+    <section class="status-panel" id="durum" aria-label="Geliştirme durumu">
+      <div class="section-heading">
+        <p class="eyebrow">Geliştirme durumu</p>
+        <h2>NuD-38, araştırma ve atmosfer çalışmasının ötesinde, oynanabilir bir VR uçuş prototipi olarak geliştiriliyor.</h2>
+      </div>
+      <div class="status-grid">
+        <article>
+          <span>Engine</span>
+          <strong>Unreal Engine prototipi</strong>
+          <p>Uçuş çekirdeği, rota sistemi ve VR deneyim dili aynı üretim hattında ilerliyor.</p>
+        </article>
+        <article>
+          <span>Flight</span>
+          <strong>Oynanabilir uçak uygulaması</strong>
+          <p>Nu.D-38 hissi; kontrol, ağırlık, kokpit ölçeği ve rota yönlendirmesi üzerinden kuruluyor.</p>
+        </article>
+        <article>
+          <span>Route</span>
+          <strong>Tarihsel rota araştırması</strong>
+          <p>Yeşilköy, İstanbul ve Taşkışla hattı arşiv izleriyle okunabilir bir uçuş rotasına dönüşüyor.</p>
+        </article>
+        <article>
+          <span>Archive</span>
+          <strong>Arşiv ve rekonstrüksiyon</strong>
+          <p>Fotoğraf, gazete kupürü ve teknik referanslar görsel dünyanın doğruluk zeminini besliyor.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="statement" id="deneyim">
       <div>
         <p class="eyebrow">Deneyim</p>
-        <h2>Türk havacılık tarihinin erken bir rüyası, kokpitten hissedilen sinematik bir rotaya dönüşüyor.</h2>
+        <h2>Simülasyon, kokpit hissi ve arşiv anlatısı aynı kısa uçuşta birleşiyor.</h2>
       </div>
       <p>Kullanıcı, Nu.D-38'in kokpitine girerek Yeşilköy'den İstanbul üzerine uzanan kısa ama güçlü bir dönem uçuşu yaşar. Amaç yalnızca uçmak değil; erken Cumhuriyet döneminin girişimci ruhunu, teknik cesaretini ve yarım kalmış vizyonunu hissettirmektir.</p>
+    </section>
+
+    <section class="simulation-layer" aria-label="Simülasyon katmanı">
+      <div>
+        <p class="eyebrow">Simülasyon katmanı</p>
+        <h2>Uçuş deneyimi, tarihsel doğruluk ve sinematik sunum arasında kurulan kontrollü bir prototip.</h2>
+      </div>
+      <div class="simulation-list">
+        <span>Tarihsel uçak rekonstrüksiyonu</span>
+        <span>Etkileşimli kokpit</span>
+        <span>VR uçuş deneyimi</span>
+        <span>Mekansal ses tasarımı</span>
+        <span>Arşiv tabanlı anlatı</span>
+        <span>Unreal Engine üretim hattı</span>
+      </div>
+    </section>
+
+    <section class="media-preview" id="medya" aria-label="NuD-38 medya ve prototip görüntüleri">
+      <div class="media-copy">
+        <p class="eyebrow">Medya</p>
+        <h2>Hareketli görüntü, projenin bir sonraki güven eşiği.</h2>
+        <p>Bu alan teaser video, kokpit görüntüsü, prototip kayıtları ve geliştirme günlüğü klipleri için ayrıldı. İlk hedef, uçağı hareket ettirmeden atmosferi, ışığı ve kokpit hissini taşıyan kısa bir hero loop ile oynanabilir prototipten alınacak temiz görüntüleri birlikte sunmak.</p>
+      </div>
+      <div class="video-placeholder" role="img" aria-label="NuD-38 teaser ve prototip videosu için ayrılmış alan">
+        <span>Teaser / Prototype Footage</span>
+        <strong>5-10 saniyelik sinematik loop ve kokpit görüntüleri için hazır alan.</strong>
+      </div>
     </section>
 
     <section class="route-intro" aria-label="NuD-38 rota özeti">
@@ -279,7 +336,7 @@
           <span>Stratejik destek ve sponsorluk</span>
         </div>
       </div>
-      <a class="button primary dark" href="mailto:hello@nud38.com?subject=NuD38%20-%20%C3%96zel%20G%C3%B6sterim%20Ba%C5%9Fvurusu&body=Merhaba%2C%0A%0ANuD38%20%C3%B6zel%20g%C3%B6sterimi%20i%C3%A7in%20ba%C5%9Fvuru%20yapmak%20istiyorum.%0A%0AAd%3A%0AKurum%20%2F%20arka%20plan%3A%0A%C4%B0lgi%20alan%C4%B1%3A%0AMesaj%3A">Özel Gösterim Başvurusu</a>
+      <a class="button primary dark" href="mailto:hello@nud38.com?subject=NuD38%20-%20%C3%96zel%20Demo%20Talebi&body=Merhaba%2C%0A%0ANuD38%20%C3%B6zel%20demo%20%2F%20g%C3%B6sterim%20s%C3%BCreci%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%3A%0AKurum%20%2F%20arka%20plan%3A%0A%C4%B0lgi%20alan%C4%B1%3A%0AMesaj%3A">Özel Demo Talebi</a>
     </section>
   </main>
 

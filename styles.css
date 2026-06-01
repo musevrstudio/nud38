@@ -300,6 +300,21 @@ h3 {
   line-height: 1.28;
 }
 
+.hero-positioning {
+  width: fit-content;
+  max-width: 720px;
+  margin: -8px 0 24px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 249, 236, 0.26);
+  color: rgba(255, 249, 236, 0.86);
+  background: rgba(255, 249, 236, 0.055);
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -389,6 +404,9 @@ h3 {
 }
 
 .statement,
+.status-panel,
+.simulation-layer,
+.media-preview,
 .route-intro,
 .history,
 .archive-evidence,
@@ -398,6 +416,57 @@ h3 {
 .roadmap,
 .support {
   padding: clamp(66px, 10vw, 138px) clamp(18px, 7vw, 104px);
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.56fr) minmax(320px, 1fr);
+  gap: clamp(34px, 7vw, 110px);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(111, 146, 158, 0.18), transparent 42%),
+    var(--porcelain);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.status-grid article {
+  min-height: 210px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(22px, 3vw, 36px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent),
+    var(--paper);
+}
+
+.status-grid span {
+  color: var(--oxide);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-grid strong {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.1vw, 32px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.status-grid p {
+  margin-bottom: 0;
+  color: rgba(15, 19, 20, 0.72);
+  font-size: 15px;
+  line-height: 1.58;
 }
 
 .statement {
@@ -413,6 +482,101 @@ h3 {
   font-family: var(--sans);
   font-size: clamp(19px, 1.45vw, 24px);
   line-height: 1.58;
+}
+
+.simulation-layer {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(320px, 1fr);
+  gap: clamp(34px, 7vw, 110px);
+  align-items: start;
+  color: var(--cream);
+  border-bottom: 1px solid var(--line-light);
+  background:
+    linear-gradient(90deg, rgba(17, 22, 18, 0.96), rgba(17, 22, 18, 0.76)),
+    linear-gradient(135deg, rgba(180, 134, 69, 0.2), transparent 46%),
+    var(--ink-soft);
+}
+
+.simulation-layer h2 {
+  max-width: 900px;
+}
+
+.simulation-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.simulation-list span {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 249, 236, 0.18);
+  color: rgba(255, 249, 236, 0.84);
+  background: rgba(255, 249, 236, 0.055);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.media-preview {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(320px, 1fr);
+  gap: clamp(34px, 7vw, 110px);
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(140deg, rgba(111, 146, 158, 0.18), transparent 44%),
+    var(--paper-deep);
+}
+
+.media-copy p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+  font-size: clamp(18px, 1.32vw, 22px);
+  line-height: 1.58;
+}
+
+.video-placeholder {
+  min-height: clamp(260px, 30vw, 440px);
+  display: grid;
+  align-content: end;
+  gap: 12px;
+  padding: clamp(24px, 3.4vw, 44px);
+  color: var(--cream);
+  background:
+    linear-gradient(180deg, rgba(8, 11, 9, 0.08), rgba(8, 11, 9, 0.72)),
+    url("assets/thehero.png") center / cover;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border: 1px solid rgba(255, 249, 236, 0.28);
+  pointer-events: none;
+}
+
+.video-placeholder span {
+  color: var(--brass);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.video-placeholder strong {
+  max-width: 520px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.08;
 }
 
 .route-intro {
@@ -850,6 +1014,9 @@ footer p {
   }
 
   .statement,
+  .status-panel,
+  .simulation-layer,
+  .media-preview,
   .history,
   .archive-evidence,
   .principle-grid,
@@ -879,6 +1046,11 @@ footer p {
     grid-template-columns: 1fr;
   }
 
+  .status-grid,
+  .simulation-list {
+    grid-template-columns: 1fr;
+  }
+
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
@@ -903,8 +1075,8 @@ footer p {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 14px;
-    padding: 22px 24px 0;
+    gap: 12px;
+    padding: 22px 18px 0;
   }
 
   .brand {
@@ -912,13 +1084,13 @@ footer p {
   }
 
   .brand-mark {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     font-size: 14px;
   }
 
   .brand-copy strong {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .header-actions {
@@ -1007,20 +1179,30 @@ footer p {
   }
 
   .hero-copy {
-    width: min(100% - 48px, 620px);
-    margin-left: 24px;
+    width: calc(100% - 36px);
+    max-width: 620px;
+    margin-left: 18px;
     margin-bottom: 40px;
     padding-top: 156px;
   }
 
   h1 {
-    font-size: clamp(76px, 23vw, 122px);
+    max-width: 100%;
+    font-size: clamp(66px, 18vw, 86px);
   }
 
   .lead {
     max-width: 560px;
     font-size: clamp(30px, 7.4vw, 42px);
     line-height: 1.16;
+  }
+
+  .hero-positioning {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
   }
 
   .hero-actions {
@@ -1053,12 +1235,33 @@ footer p {
   }
 
   footer {
-    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
     justify-items: start;
+    gap: 20px;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    text-align: left;
+  }
+
+  .footer-brand,
+  .footer-meta {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-brand p,
+  .footer-meta span,
+  .footer-meta a {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    line-height: 1.55;
   }
 
   .footer-meta {
     justify-items: start;
+    font-size: 12px;
   }
 }
 
