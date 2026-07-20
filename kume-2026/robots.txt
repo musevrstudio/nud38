@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /kume-2026/
